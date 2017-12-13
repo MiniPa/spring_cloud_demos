@@ -1,0 +1,20 @@
+package com.minipa.scd.scc.remote;
+
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+/**
+ * HelloRemote: spring_cloud_producer 命名的服务一定要在eureka中注册了
+ * 
+ * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
+            <a href="https://github.com/MiniPa">minipa_github</a>
+ * @version: 1.0.0, 2017-12-13 shared by all free coders 
+ **/
+@FeignClient(name= "spring_cloud_producer")
+public interface HelloRemote {
+
+    @RequestMapping(value = "/hello")
+    public String hello(@RequestParam(value = "name") String name);
+
+}
