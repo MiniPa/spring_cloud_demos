@@ -2,9 +2,11 @@ package com.minipa.scd.scc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
  * SpringCloudConsumerApplication:
@@ -18,6 +20,10 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
  *        Spring Cloud对Feign进行了封装,使之支持了Spring MVC标准注解和HttpMessageConverts
  *        可与Eureka和Ribbon组合使用以支持负载均衡
  *
+ * Hystrix Dashboard开启
+ * @EnableHystrixDashboard
+ * @EnableCircuitBreaker
+ *
  * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
             <a href="https://github.com/MiniPa">minipa_github</a>
  * @version: 1.0.0, 2017-12-13 shared by all free coders
@@ -25,6 +31,8 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
+@EnableHystrixDashboard
+@EnableCircuitBreaker
 public class SpringCloudConsumerApplication {
 
 	public static void main(String[] args) {
