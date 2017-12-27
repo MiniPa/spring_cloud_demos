@@ -1,6 +1,12 @@
 # 说明：
-/spring-cloud-config 目录中的client配置文件中直接调用了server相关信息，导致二者耦合。不符合spring cloud服务治理的理念。故此案例不适合在世界生产中使用
+git和svn两种不同的配置文件管理中心，
+能有效的简化配置管理的难度系数，减轻运维功工作量。
 
+/spring-cloud-config 目录中的client配置文件中直接调用了
+server相关信息，导致二者耦合。不符合spring cloud服务治理的理念。
+故此案例不适合在生产中使用。  
+
+后面文章有提到改进的更合理方案。
 
 
 
