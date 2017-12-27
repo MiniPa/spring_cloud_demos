@@ -1,5 +1,6 @@
 server:
   port: 8020
+  #port: 8030
 spring:
   application:
     name: spring-cloud-config-eureka-git-server
@@ -19,7 +20,10 @@ spring:
 #         http://localhost:8020/scd-config-dev.properties 直接查看配置文件中的配置信息
 #         server端会自动读取git最新提交的内容 修改git上配置再进行访问可可得到最新内容
 
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/   ## 注册中心eurka地址
 
 
 
@@ -31,12 +35,6 @@ spring:
 #    port: 5672
 #    username: admin
 #    password: 123456
-#
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://localhost:8000/eureka/   ## 注册中心eurka地址
-#
 #
 #management:
 #  security:
