@@ -25,18 +25,14 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/   ## 注册中心eurka地址
 
+  rabbitmq:
+    host: 192.168.245.222
+    port: 5672
+    username: admin
+    password: 123456
 
-
-
-
-
-#  rabbitmq:
-#    host: 192.168.0.6
-#    port: 5672
-#    username: admin
-#    password: 123456
-#
-#management:
-#  security:
-#     enabled: false
+# 关闭验证
+management:
+  security:
+     enabled: false
 
