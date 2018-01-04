@@ -1,0 +1,38 @@
+server:
+  port: 8020
+  #port: 8030
+spring:
+  application:
+    name: spring-cloud-config-eureka-git-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MiniPa/spring_cloud_demos/      # 配置git仓库的地址
+          search-paths: config                                    # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: Minipa                                        # git仓库的账号
+          password: 2010nddycx                                    # git仓库的密码
+### spring.profiles.active=native 则Spring Cloud Config默认使用 src/main/resources下配置文件
+### spring.cloud.config.server.native.searchLocations=file:E:/properties/ 属性指定配置文件的位置
+
+### git上已存放三个配置文件，scd-config-dev(pro,test).properties 内容都含有minipa.git属性，各自值分别不同
+### 访问 ：http://localhost:8020/scd-config/dev 可读到git上的配置信息
+#         http://localhost:8020/scd-config-dev.properties 直接查看配置文件中的配置信息
+#         server端会自动读取git最新提交的内容 修改git上配置再进行访问可可得到最新内容
+
+  rabbitmq:
+    host: 192.168.245.222
+    port: 5672
+    username: admin
+    password: 123456
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/   ## 注册中心eurka地址
+
+# 关闭验证
+management:
+  security:
+     enabled: false
+
