@@ -1,0 +1,32 @@
+server:
+  port: 8030
+
+### zuul 基于JVM路由和服务端的负载均衡
+zuul:
+  routes:
+    csdn:
+      # http://localhost:8030/snsmbnsr/article/details/78625393
+      # 访问 /snsmbnsr/** 重定向到 http://blog.csdn.net/snsmbnsr/**
+      path: /snsmbnsr/**
+      url: http://blog.csdn.net/snsmbnsr/
+    github:
+      # http://localhost:8030/hello/eric
+      path: /hello/**
+      url: http://localhost:9001/hello/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

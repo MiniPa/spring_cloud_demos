@@ -9,7 +9,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String index(@RequestParam String name) {
-        return "hello "+name+"，this is eureak producer";
+        return "hello "+name+"，0.0.1-2-SNAPSHOT this is eureak producer";
     }
 
 }
