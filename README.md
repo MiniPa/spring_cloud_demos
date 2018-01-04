@@ -8,7 +8,7 @@ spring cloud 是一系列框架的有序集合，利用Spring Boot的开发便�
 作者地址: https://github.com/MiniPa
 作者邮箱: <a href="mailto:chengjs_minipa@outlook.com">chengjs</a>
 
-# spring_boot_demos
+# spring_cloud_demos
 
 I'll update some skills in actual development aperiodically.
 There are no complicated operation flows or xxx system,just some practical shares about skills.
